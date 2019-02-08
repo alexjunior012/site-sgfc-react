@@ -23,6 +23,7 @@ class Navbar extends React.Component {
 
     render() {
         const { routes } = this.props;
+        console.log(routes);
 
         return (
             <>
@@ -51,7 +52,7 @@ class Navbar extends React.Component {
                                                         component={prop.component}
                                                         key={key}
                                                     >
-                                                    <NavLink>{prop.name}</NavLink>
+                                                        <NavLink>{prop.name}</NavLink>
                                                     </Route>
                                                 </NavItem>
                                             );
