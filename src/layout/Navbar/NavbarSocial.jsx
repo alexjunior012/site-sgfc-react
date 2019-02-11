@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faIgloo, faCertificate } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF, faInstagram, faYoutube, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import {
     Container,
     Row,
@@ -11,30 +11,30 @@ import {
 const infoSocial = [
     {
         name: 'Facebook',
-        url: '',
-        title: '',
-        icon: faIgloo,
+        url: 'https://www.facebook.com/saogregoriofc',
+        title: 'Curta nossa página no Facebook',
+        icon: faFacebookF,
         status: ''
     },
     {
         name: 'Instagram',
         url: '',
         title: '',
-        icon: faIgloo,
+        icon: faInstagram,
         status: ''
     },
     {
         name: 'Youtube',
         url: '',
         title: '',
-        icon: faIgloo,
+        icon: faYoutube,
         status: ''
     },
     {
         name: 'Whattsapp',
         url: '',
         title: '',
-        icon: faCertificate,
+        icon: faWhatsapp,
         status: ''
     },
 ];

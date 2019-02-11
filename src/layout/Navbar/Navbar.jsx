@@ -36,7 +36,7 @@ class Navbar extends React.Component {
 
         return (
             <>
-            <Container fluid>
+            <Container tag='div' className="navbar navbar-main navbar-fixed-top">
                 <Row>
                     <SocialNavbar/>
                     <Col xl={12} md={12} sm={12}>

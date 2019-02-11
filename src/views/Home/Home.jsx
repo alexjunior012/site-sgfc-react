@@ -6,6 +6,8 @@ import {
     Col
 } from 'reactstrap';
 
+import Banner from './Banner';
+
 class Home extends React.Component {
     constructor(props){
         super(props);
@@ -14,10 +16,10 @@ class Home extends React.Component {
     render() {
         return (
             <>
-                <Container>
+                <Container fluid>
                     <Row>
-                        <Col lg="12" md="5" sm="5" xs="12">
-                            <h1>Home</h1>
+                        <Col lg="12" md="12" sm="12" xs="12">
+                            <Banner/>
                         </Col>
                     </Row>
                 </Container>

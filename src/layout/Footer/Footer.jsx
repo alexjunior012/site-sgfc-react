@@ -100,8 +100,10 @@ class Footer extends React.Component {
                                 <p>São Gregório F.C. &copy; {(new Date).getFullYear()}</p>
                             </Col>
                             <Col lg={6} md={6} sm={6} xs={6}>
-                                <a href="https://a12technology.com">
-                                    A12 Technology
+                                <a href="https://a12technology.com" title="A12 Technology">
+                                    <img src={require("assets/images/a12technology.png")}
+                                         className="img-responsive logoa12"
+                                         alt="A12 Technology"/>
                                 </a>
                             </Col>
                         </Row>
