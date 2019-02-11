@@ -1,0 +1,15 @@
+$blue: #245bff;
+$blue-hover: #4883FF;
+$red: #ff0;
+
+
+.btn{
+  &.btn-default{
+    background: $blue;
+    color: #fff;
+
+    &:hover{
+      background: $blue-hover;
+    }
+  }
+}

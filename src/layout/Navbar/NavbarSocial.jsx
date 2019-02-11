@@ -19,12 +19,12 @@ class NavbarSocial extends React.Component {
                     <Container>
                         <Row>
                             <Col lg="12" md="5" sm="5" xs="12">
-                                <div class="top-sosmed pull-right">
+                                <div className="top-sosmed pull-right">
                                     <NavLink
                                         href="https://www.facebook.com/saogregoriofc"
                                         target="_blank"
                                         title="Curta a nossa pagina no facebook">
-                                        <span class="fa fa-facebook"></span>
+                                        <span className="fa fa-facebook"></span>
                                     </NavLink>
                                 </div>
                             </Col>

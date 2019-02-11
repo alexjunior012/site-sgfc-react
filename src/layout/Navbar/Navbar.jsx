@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Route, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import SocialNavbar from './NavbarSocial';
 
@@ -7,18 +7,28 @@ import {
     Container,
     Row,
     Col,
-    Navbar as NavbarReact,
-    NavbarBrand,
-    NavbarToggler,
     Collapse,
+    Navbar as NavbarReact,
+    NavbarToggler,
+    NavbarBrand,
     Nav,
-    NavItem,
-    NavLink
+    NavItem
 } from 'reactstrap';
 
 class Navbar extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
+
+        this.toggle = this.toggle.bind(this);
+        this.state = {
+            isOpen: false
+        };
+    }
+
+    toggle() {
+        this.setState({
+            isOpen: !this.state.isOpen
+        });
     }
 
     render() {
@@ -26,42 +36,32 @@ class Navbar extends React.Component {
 
         return (
             <>
-                <div className="navbar navbar-main navbar-fixed-top">
+            <Container fluid>
+                <Row>
                     <SocialNavbar/>
-                    <Container>
-                        <div class="navbar-header">
-                            <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span className="icon-bar"></span>
-                                <span className="icon-bar"></span>
-                                <span className="icon-bar"></span>
-                            </button>
-                            <NavbarBrand href="http://saogregoriofc.com.br">
-                                <img src="images/logo1.png" alt="São Gregório F.C." />
-                            </NavbarBrand>
-                        </div>
-                        <Collapse>
-                            <NavbarReact className="navbar-collapse collapse">
-                                <Nav className="nav navbar-nav navbar-right">
-                                    <Switch>
-                                        {routes.map((prop, key) => {
-                                            return (
-                                                <NavItem key={key}>
-                                                    <Route
-                                                        path={prop.path}
-                                                        component={prop.component}
-                                                        key={key}
-                                                    >
-                                                    <NavLink>{prop.name}</NavLink>
-                                                    </Route>
-                                                </NavItem>
-                                            );
-                                        })}
-                                    </Switch>
+                    <Col xl={12} md={12} sm={12}>
+                        <NavbarReact color="light" light expand="md">
+                            <NavbarBrand href="/">SGFC</NavbarBrand>
+                            <NavbarToggler onClick={this.toggle} />
+                            <Collapse isOpen={this.state.isOpen} navbar>
+                                <Nav className="ml-auto" navbar>
+                                    {routes.map((prop, key) => {
+                                        return (
+                                            <NavItem key={key}>
+                                                <Link className="nav-link"
+                                                      to={prop.path}
+                                                      key={key}>
+                                                    {prop.name}
+                                                </Link>
+                                            </NavItem>
+                                        );
+                                    })}
                                 </Nav>
-                            </NavbarReact>
-                        </Collapse>
-                    </Container>
-                </div>
+                            </Collapse>
+                        </NavbarReact>
+                    </Col>
+                </Row>
+            </Container>
             </>
         );
     }
