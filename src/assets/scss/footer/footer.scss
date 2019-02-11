@@ -1,0 +1,107 @@
+footer {
+  background-color: #202020;
+
+  .title-footer{
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    position:relative;
+    padding: 10px 0;
+    margin-bottom: 40px;
+
+    &:after{
+      position:absolute;
+      content:'';
+      width:50px;
+      height:10px;
+      border-bottom:2px solid $blue;
+    }
+  }
+
+  div{
+    &.footer-nav{
+      background-color: #252525;
+      color: #fff;
+      padding: 50px 0;
+
+      .footerItem{
+        line-height: 20px;
+        color: #999;
+        font-weight: 400;
+        margin-bottom: 20px;
+        min-height: 250px;
+
+        .social-networks{
+          margin-top: 20px;
+
+          .item{
+            width:30px;
+            height:30px;
+            text-align:center;
+            border: 1px solid #fff;
+            color:#fff;
+            display: inline-table;
+            padding-top: 5px;
+            border-radius: 50%;
+
+            &:hover{
+              background-color:#fff;
+              color:#252525;
+            }
+          }
+        }
+
+        .sitemap{
+          -webkit-column-count: 2;
+          -moz-column-count: 2;
+          column-count: 2;
+
+          &:after{
+            content: '';
+            clear: both;
+            display: block;
+            width: 100%;
+          }
+
+          li{
+            padding: 6px 0;
+
+            &:before{
+              font-family: FontAwesome;
+              content: "\f105";
+              color: $blue;
+              float:left;
+              margin-right: 20px;
+              font-size: 16px;
+            }
+
+            a{
+              color: #999999;
+
+              &:hover{
+                color: #fff;
+              }
+            }
+          }
+        }
+
+        .form-newsletter{
+          &:hover,
+          &:focus{
+            /*background-color: #000;
+            outline: 0;
+            border: 1px solid #999;
+            -webkit-box-shadow: none;
+            box-shadow: none;*/
+          }
+        }
+      }
+    }
+
+    &.copyright{
+      color: #999;
+      padding: 20px 20px;
+    }
+
+  }
+}
