@@ -1,0 +1,66 @@
+.navbar-main{
+  background-color: #245bff;
+  border-color: transparent;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, .05);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .05);
+}
+.header-top{
+  background-color: #000;
+  color:#fff;
+  height:40px;
+}
+.navbar-main.stiky .header-top{
+  display: none;
+}
+.navbar-brand {
+  margin-top: -60px;
+}
+.navbar-main.stiky  .navbar-brand {
+  margin-top: -15px;
+}
+.navbar-main .navbar-brand > img {
+  width: 100%;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  box-shadow: 1px 1px 5px #333;
+  background: rgba(255,255,255, 0.7);
+}
+.navbar-main.stiky .navbar-brand > img {
+  width: 60%;
+}
+.navbar-main .nav > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 22px;
+}
+.navbar-main .navbar-nav > li > a {
+  padding-top:30px;
+  min-height: 80px;
+  font-size:12px;
+  line-height:22px;
+  color:#fff;
+  background-color:transparent;
+  font-weight:700;
+  text-transform:uppercase;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+}
+.navbar-main.stiky .navbar-nav > li > a {
+  padding-top: 20px;
+  min-height: 60px;
+}
+.navbar-main .navbar-nav > li > a:hover,
+.navbar-main .navbar-nav > li > a:focus,
+.navbar-main .navbar-nav > li > a:active{
+  color:#000;
+  background-color:transparent;
+  border-bottom:3px solid #000;
+}
+.navbar-main .navbar-nav > li.active a{
+  color:#000;
+  background-color:transparent;
+  border-bottom:3px solid #000;
+}
+.navbar-toggle .icon-bar {
+  background-color: #fff;
+}
