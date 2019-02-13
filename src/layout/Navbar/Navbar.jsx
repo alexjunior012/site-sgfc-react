@@ -36,18 +36,20 @@ class Navbar extends React.Component {
 
         return (
             <>
-            <Container tag='div' className="navbar navbar-main navbar-fixed-top">
-                <Row>
-                    <SocialNavbar/>
-                    <Col xl={12} md={12} sm={12}>
-                        <NavbarReact color="light" light expand="md">
+                <SocialNavbar/>
+                <div className="menu">
+                    <Container>
+                        <NavbarReact expand="sm">
+
                             <NavbarBrand href="/">SGFC</NavbarBrand>
+
                             <NavbarToggler onClick={this.toggle} />
+
                             <Collapse isOpen={this.state.isOpen} navbar>
-                                <Nav className="ml-auto" navbar>
+                                <Nav className="ml-auto">
                                     {routes.map((prop, key) => {
                                         return (
-                                            <NavItem key={key}>
+                                            <NavItem key={key} className="menu-item">
                                                 <Link className="nav-link"
                                                       to={prop.path}
                                                       key={key}>
@@ -59,9 +61,8 @@ class Navbar extends React.Component {
                                 </Nav>
                             </Collapse>
                         </NavbarReact>
-                    </Col>
-                </Row>
-            </Container>
+                    </Container>
+                </div>
             </>
         );
     }
