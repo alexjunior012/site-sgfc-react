@@ -1,43 +1,13 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faInstagram, faYoutube, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import {
     Container,
-    Row,
-    Col,
+    Nav,
+    NavItem,
     NavLink
 } from 'reactstrap';
 
-const infoSocial = [
-    {
-        name: 'Facebook',
-        url: 'https://www.facebook.com/saogregoriofc',
-        title: 'Curta nossa página no Facebook',
-        icon: faFacebookF,
-        status: ''
-    },
-    {
-        name: 'Instagram',
-        url: '',
-        title: '',
-        icon: faInstagram,
-        status: ''
-    },
-    {
-        name: 'Youtube',
-        url: '',
-        title: '',
-        icon: faYoutube,
-        status: ''
-    },
-    {
-        name: 'Whattsapp',
-        url: '',
-        title: '',
-        icon: faWhatsapp,
-        status: ''
-    },
-];
+import infoSocial from "routes/SocialNetworks";
 
 class NavbarSocial extends React.Component {
     constructor(props){
@@ -47,25 +17,22 @@ class NavbarSocial extends React.Component {
     render() {
         return (
             <>
-                <div className="header-top">
+                <div className="top-social-nav">
                     <Container>
-                        <Row>
-                            <Col lg="12" md="5" sm="5" xs="12">
-                                <div class="top-sosmed pull-right">
-                                    {infoSocial.map((info, key) => {
-                                        return (
-                                            <NavLink
-                                                href={info.url}
-                                                target="_blank"
-                                                title={info.title}
-                                                key={key}>
-                                                <FontAwesomeIcon icon={info.icon} />
-                                            </NavLink>
-                                        )
-                                    })}
-                                </div>
-                            </Col>
-                        </Row>
+                        <Nav tag='nav'>
+                            {infoSocial.map((info, key) => {
+                                return (
+                                    <NavItem key={key}>
+                                        <NavLink
+                                            href={info.url}
+                                            target="_blank"
+                                            title={info.title}>
+                                            <FontAwesomeIcon icon={info.icon} />
+                                        </NavLink>
+                                    </NavItem>
+                                )
+                            })}
+                        </Nav>
                     </Container>
                 </div>
             </>
