@@ -8,12 +8,37 @@
     max-height: inherit;
 
     .nav-item{
+      transition: color 0.3s ease;
+
       a{
-        transition: color 0.3s ease;
         color: $blue;
 
         &:hover{
           color: $white;
+        }
+      }
+
+      &.facebook{
+        &:hover{
+          background: $facebook-color;
+        }
+      }
+
+      &.instagram{
+        &:hover{
+          background: $instagram-color;
+        }
+      }
+
+      &.youtube{
+        &:hover{
+          background: $youtube-color;
+        }
+      }
+
+      &.whatsapp{
+        &:hover{
+          background: $whatsapp-color;
         }
       }
     }
