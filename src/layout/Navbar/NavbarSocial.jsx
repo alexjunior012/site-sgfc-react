@@ -22,7 +22,7 @@ class NavbarSocial extends React.Component {
                         <Nav tag='nav'>
                             {infoSocial.map((info, key) => {
                                 return (
-                                    <NavItem key={key}>
+                                    <NavItem key={key} className={info.class}>
                                         <NavLink
                                             href={info.url}
                                             target="_blank"
