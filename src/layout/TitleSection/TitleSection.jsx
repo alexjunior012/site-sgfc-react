@@ -6,9 +6,7 @@ import {
     Col
 } from 'reactstrap';
 
-import Banner from './Banner';
-
-class Home extends React.Component {
+class TitleSection extends React.Component {
     constructor(props){
         super(props);
     }
@@ -16,19 +14,18 @@ class Home extends React.Component {
     render() {
         return (
             <>
-                <section>
+                <section className="bannerSection">
                     <Container>
                         <Row>
                             <Col lg="12" md="12" sm="12" xs="12">
-                                <Banner/>
+                                <div className="title">{this.props.titleSection}</div>
                             </Col>
                         </Row>
                     </Container>
                 </section>
-
             </>
         );
     }
 }
 
-export default Home;
+export default TitleSection;

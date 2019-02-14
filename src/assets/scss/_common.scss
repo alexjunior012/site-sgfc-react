@@ -1,0 +1,25 @@
+.containerTopNav{
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.bannerSection{
+  background:  no-repeat center center;
+  background: url(../images/bannerSection.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 300px;
+
+  .title{
+    margin-top: 200px;
+    color: $white;
+    font-size: 40px;
+    font-family: 'bebas_neue', sans-serif;
+    font-weight: 700;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, .6);
+  }
+}
+

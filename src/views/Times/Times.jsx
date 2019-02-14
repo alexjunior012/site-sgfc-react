@@ -1,26 +1,23 @@
 import React from "react";
-
 import {
     Container,
     Row,
     Col
 } from 'reactstrap';
+import TopSection from 'layout/TitleSection/TitleSection';
 
 class Times extends React.Component {
     constructor(props){
         super(props);
+        this.state = {
+            titleSection: 'Times'
+        }
     }
 
     render() {
         return (
             <>
-            <Container>
-                <Row>
-                    <Col lg="12" md="5" sm="5" xs="12">
-                        <h1>Times</h1>
-                    </Col>
-                </Row>
-            </Container>
+                <TopSection titleSection={this.state.titleSection} />
             </>
         );
     }

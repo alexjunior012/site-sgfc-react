@@ -1,11 +1,8 @@
 @import "~bootstrap/scss/bootstrap.scss";
-
 @import "variables";
-
+@import "common";
 @import "animationLoader/animation-loader";
-
 @import "Navbar/Navbar";
 @import "Navbar/socialNetwork";
-
 @import "footer/footer";
 

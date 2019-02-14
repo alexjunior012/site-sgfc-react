@@ -1,26 +1,30 @@
 import React from "react";
-
 import {
     Container,
     Row,
     Col
 } from 'reactstrap';
+import TopSection from 'layout/TitleSection/TitleSection';
 
 class Sobre extends React.Component {
     constructor(props){
         super(props);
+        this.state = {
+            titleSection: 'Sobre'
+        }
     }
 
     render() {
         return (
             <>
-            <Container>
-                <Row>
-                    <Col lg="12" md="5" sm="5" xs="12">
-                        <h1>Sobre nós</h1>
-                    </Col>
-                </Row>
-            </Container>
+                <TopSection titleSection={this.state.titleSection} />
+
+                {/*SEÇÕES PARA DESENVOLVER*/}
+
+                {/*Sobre o clube*/}
+                {/*Historia do clube*/}
+                {/*Diretoria*/}
+                {/*Parceiros*/}
             </>
         );
     }

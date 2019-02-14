@@ -36,32 +36,47 @@ class Navbar extends React.Component {
 
         return (
             <>
-                <SocialNavbar/>
-                <div className="menu">
-                    <Container>
-                        <NavbarReact expand="sm">
+                <div className="containerTopNav">
+                    <SocialNavbar/>
+                    <div className="menu">
+                        <Container>
+                            <NavbarReact expand="sm">
 
-                            <NavbarBrand href="/">SGFC</NavbarBrand>
+                                <div className="logo-sgfc">
+                                    <NavbarBrand href="/">
+                                        {/*<img src={require('assets/images/logo.png')} className="img-fluid" alt="São Gregório F.C."/>*/}
+                                    </NavbarBrand>
+                                </div>
 
-                            <NavbarToggler onClick={this.toggle} />
+                                {/*<div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" href="http://saogregoriofc.com.br"><img src="images/logo1.png" alt="São Gregório F.C." /></a>
+                                </div>*/}
 
-                            <Collapse isOpen={this.state.isOpen} navbar>
-                                <Nav className="ml-auto">
-                                    {routes.map((prop, key) => {
-                                        return (
-                                            <NavItem key={key} className="menu-item">
-                                                <Link className="nav-link"
-                                                      to={prop.path}
-                                                      key={key}>
-                                                    {prop.name}
-                                                </Link>
-                                            </NavItem>
-                                        );
-                                    })}
-                                </Nav>
-                            </Collapse>
-                        </NavbarReact>
-                    </Container>
+                                <NavbarToggler onClick={this.toggle} />
+
+                                <Collapse isOpen={this.state.isOpen} navbar>
+                                    <Nav className="ml-auto">
+                                        {routes.map((prop, key) => {
+                                            return (
+                                                <NavItem key={key} className="menu-item">
+                                                    <Link className="nav-link"
+                                                          to={prop.path}
+                                                          key={key}>
+                                                        {prop.name}
+                                                    </Link>
+                                                </NavItem>
+                                            );
+                                        })}
+                                    </Nav>
+                                </Collapse>
+                            </NavbarReact>
+                        </Container>
+                    </div>
                 </div>
             </>
         );
