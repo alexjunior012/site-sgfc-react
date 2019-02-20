@@ -1,11 +1,10 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-
 import AnimationLoader from "./AnimationLoader";
 import NavbarPortal from "./Navbar/Navbar";
+import Partners from "./Partners/Partners";
 import Footer from "./Footer/Footer";
-
-import routes from "../routes/routesSidebar.js";
+import routes from "routes/routesSidebar.js";
 
 class PortalLayout extends React.Component {
     constructor(props) {
@@ -13,6 +12,8 @@ class PortalLayout extends React.Component {
     }
 
     render() {
+        // console.log(this.props.location.pathname);
+
         return (
             <>
                 <AnimationLoader/>
@@ -33,6 +34,7 @@ class PortalLayout extends React.Component {
                         }
                     })}
                 </Switch>
+                <Partners/>
                 <Footer/>
             </>
         );
