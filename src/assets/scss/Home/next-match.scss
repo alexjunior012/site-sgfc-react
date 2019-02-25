@@ -1,0 +1,57 @@
+.next-match{
+  //background: $black-light;
+  background: $white;
+  //background:url('../images/match.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  .bg-overlay{
+    background-color:rgba(0, 0, 0, 0.2);
+    display:block;
+    padding:80px 0;
+  }
+}
+
+.match-club{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.club-name{
+  font-size: 20px;
+  font-family: 'bebas_neue', sans-serif;
+  font-weight: 700;
+  color: #245bff;
+}
+.match-description{
+  text-align:center;
+}
+.liga-name{
+  font-size: 40px;
+  font-family: 'bebas_neue', sans-serif;
+  font-weight: 700;
+  color: #245bff;
+  margin-bottom: 10px;
+  margin-top: -30px;
+  line-height: 30px;
+}
+.liga-date{
+  font-size: 20px;
+  font-family: 'bebas_neue', sans-serif;
+  font-weight: 700;
+  color: #245bff;
+  margin-bottom: 40px;
+}
+.liga-vs{
+  font-size: 28px;
+  font-family: 'bebas_neue', sans-serif;
+  font-weight: 700;
+  color: #245bff;
+  margin-bottom: 60px;
+}
+.liga-location{
+  font-size: 14px;
+  color: #fff;
+}

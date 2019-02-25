@@ -1,5 +1,9 @@
 import React from "react";
 
+import Slider from 'react-animated-slider';
+import 'react-animated-slider/build/horizontal.css';
+// import horizontalCss from 'react-animated-slider/build/horizontal.css';
+
 import {
     Carousel,
     CarouselItem,
@@ -19,11 +23,11 @@ const items = [
         altText: 'Slide 1',
         caption: 'Slide 1'
     },
-    {
+    /*{
         src: 'https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/15665731_1597342630357933_3930923588705780458_n.jpg?_nc_cat=109&_nc_ht=scontent-gru2-2.xx&oh=d2681bc8b562e5028bb3b5e521700dff&oe=5CFDBB5F',
         altText: 'Slide 2',
         caption: 'Slide 2'
-    }
+    }*/
 ];
 
 class Banner extends React.Component {
@@ -79,15 +83,20 @@ class Banner extends React.Component {
         });
 
         return (
-            <Carousel
-                activeIndex={activeIndex}
-                next={this.next}
-                previous={this.previous}>
-                <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
-                {slides}
-                <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-                <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
-            </Carousel>
+            <Slider autoplay={3000}>
+                {items.map((item, index) => (
+                    <div
+                        key={index}
+                        style={{ background: `url('${item.src}') no-repeat center center` }}
+                    >
+                        <div className="center">
+                            <h1>{item.altText}</h1>
+                            <p>{item.caption}</p>
+                            <button>{item.altText}</button>
+                        </div>
+                    </div>
+                ))}
+            </Slider>
         );
     }
 }
