@@ -24,8 +24,20 @@
   }
 }
 
+.padding{
+  padding:80px 0;
+}
+
 .bg-azul{
-  background: $blue-dark;
+  background-color: $blue-dark;
+}
+
+.bg-blue{
+  background-color: $blue-hover;
+}
+
+.bg-gray{
+  background-color: #e9ecef;
 }
 
 .client-img{

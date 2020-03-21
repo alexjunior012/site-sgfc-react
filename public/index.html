@@ -22,7 +22,43 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>São Gregório F.C.</title>
+
+    <!--<script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyADspV88xajzzs-Oa3tjU4fywwXGtZT13I",
+            authDomain: "teste-5ca1c.firebaseapp.com",
+            databaseURL: "https://teste-5ca1c.firebaseio.com",
+            projectId: "teste-5ca1c",
+            storageBucket: "teste-5ca1c.appspot.com",
+            messagingSenderId: "317069251470"
+        };
+        firebase.initializeApp(config);
+
+        var messaging = firebase.messaging();
+
+        messaging.usePublicVapidKey('BGotnM_5UVz2zY4BFMk6mOmk_AYa84hLja1ZMhYI-35RULU4FkmH2UoBhnBlf4w5Wxf1gcuef-UBYDE_B6NfYfo');
+
+        messaging.requestPermission().then(function() {
+            console.log('Notification permission granted.');
+            messaging.getToken().then(function(currentToken) {
+                document.getElementById('token').innerHTML = currentToken;
+            }).catch(function(err) {
+                console.log('Unable to get permission to notify.', err);
+            });
+        }).catch(function(err) {
+            console.log('Unable to get permission to notify.', err);
+        });
+
+        messaging.onMessage(function(payload){
+            var obj = JSON.parse(payload.data.notification);
+            var notiication = new Notification(obj.title, {
+                icon: obj.icon,
+                body: obj.body
+            })
+        })
+    </script>-->
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

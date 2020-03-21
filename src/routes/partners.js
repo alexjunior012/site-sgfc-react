@@ -2,10 +2,10 @@ const partners = [
     {
         name: 'exemplo 1',
         url: 'https://www.facebook.com/saogregoriofc',
-        logo: require('assets/images/partners/client1.png'),
+        logo: require('assets/images/a12technology.png'),
         status: 'facebook',
     },
-    {
+    /*{
         name: 'exemplo 2',
         url: 'https://www.facebook.com/saogregoriofc',
         logo: require('assets/images/partners/client1.png'),
@@ -22,7 +22,7 @@ const partners = [
         url: 'https://www.facebook.com/saogregoriofc',
         logo: require('assets/images/partners/client1.png'),
         status: 'facebook',
-    },
+    },*/
 ];
 
 export default partners;

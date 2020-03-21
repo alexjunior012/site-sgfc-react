@@ -1,11 +1,15 @@
 import React from "react";
-import Partners from "layout/Partners/Partners.jsx";
 import {
     Container,
     Row,
     Col
 } from 'reactstrap';
 import Banner from './Banner';
+import Partners from "layout/Partners/Partners";
+import News from './News';
+import NextMatch from './NextMach/NextMatch';
+import Players from './Players';
+import Gallery from './Gallery';
 
 class Home extends React.Component {
     constructor(props){
@@ -17,16 +21,9 @@ class Home extends React.Component {
             <>
             <section>
                 <Banner/>
-                {/*<Container>
-                    <Row>
-                        <Col lg="12" md="12" sm="12" xs="12">
-
-                        </Col>
-                    </Row>
-                </Container>*/}
             </section>
 
-            <section className="bg-azul">
+            <section className="bg-azul container-partners">
                 <Row>
                     <Col lg="12" md="12" sm="12" xs="12">
                         <Partners/>
@@ -34,40 +31,33 @@ class Home extends React.Component {
                 </Row>
             </section>
 
-            <section className="next-match">
-                <div className="bg-overlay">
-                    <Container>
-                        <Row>
-                            <Col lg="12" md="12" sm="12" xs="12">
-                                <Row>
-                                    <Col lg="4" md="4" sm="4" xs="4">
-                                        <div className="match-club">
-                                            <img src={require('assets/images/logo.png')} alt="" />
-                                            <div className="club-name">PROSOCCER</div>
-                                        </div>
-                                    </Col>
-                                    <Col lg="4" md="4" sm="4" xs="4">
-                                        <div className="match-description">
-                                            <div className="liga-name">LIGA PREMIERE</div>
-                                            <div className="liga-date">JUNE 16, 17:00</div>
-                                            <div className="liga-vs">VS</div>
-                                            <div className="liga-location">STADION JAKABARING<br />PEKANBARU</div>
-                                        </div>
-                                    </Col>
-                                    <Col lg="4" md="4" sm="4" xs="4">
-                                        <div className="match-club">
-                                            <img src={require('assets/images/logo.png')} alt="" />
-                                            <div className="club-name">JUPENTUS</div>
-                                        </div>
-                                    </Col>
-                                </Row>
-                            </Col>
-                        </Row>
-                    </Container>
-                </div>
+            <section className="padding bg-gray">
+                <Container>
+                    <Row>
+                        <Col lg="7" md="7" sm="7" xs="7">
+                            <News/>
+                        </Col>
+                        <Col lg="5" md="5" sm="5" xs="5">
+                            <NextMatch/>
+                        </Col>
+                    </Row>
+                </Container>
+                <Container>
+                    <Row>
+                        <Col lg="12" md="12" sm="12" xs="12">
+                            <Players/>
+                        </Col>
+                    </Row>
+                </Container>
             </section>
 
+            <section className="gallery">
+                <Gallery/>
+            </section>
 
+            <section className="">
+
+            </section>
             </>
         );
     }
